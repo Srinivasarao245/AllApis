@@ -14,24 +14,38 @@
 <body>
     <div id="currencyConverter">
         <div>
-            <input type="number" name="" ><br>
-            <select name="Country" id="country">
+            <input type="number" id="money" ><br>
+            <h3>From:</h3>
+            <select name="Country" id="fromcountry">
                 <option value="ind">India</option>
                 <option value="usa">United States of America</option>
                 <option value="uk">United Kingdom</option>
                 <option value="eur">Europian</option>
-            </select>
-        </div>
-        <div>
-            <input type="number" name="" ><br>
-            <select name="Country" id="country">
+            </select>       
+            <h3>To:</h3>
+            <select name="Country" id="tocountry">
                 <option value="ind">India</option>
                 <option value="usa">United States of America</option>
                 <option value="uk">United Kingdom</option>
                 <option value="eur">Europian</option>
-            </select>
+            </select><br><br>
+            <button onclick="Convert()">Convert</button> <br>
+            <h1>Final:</h1>
         </div>    
     </div>
-    <script></script>
+    <script>
+        function Convert(){
+            var fc=document.getElementById("fromcountry").value;
+            var tc=document.getElementById("tocountry").value;
+            var m=document.getElementById("money").value;
+            console.log(fc);
+            console.log(tc);
+            console.log(m);
+            fetch("`https://api.exchangerate-api.com/v4/latest/"+fc)
+            .then((res)=>{
+                res.json().then((data)=>{console.log(data)})
+            })
+        }
+    </script>
 </body>
 </html>
