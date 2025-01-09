@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <style>
+          
+            .outer{
+                height: 530px;
+                width: 330px;
+                border: 2px solid;
+                background-color:black;
+                border-radius: 20px;
+            }
+            #display{
+                height:100px;
+                width: 318px;
+                border: 5px solid rgb(61, 61, 60);
+                /* border-bottom: 2px solid rgb(91, 90, 90); */
+                margin-top: 30px; 
+                margin-left:4px;
+                margin-right:5px; 
+                border-radius:25px;
+                background-color: rgb(244, 230, 230);
+                text-align: right;
+                font-size: 50px;
+               
+            }
+           
+           
+            button{
+                padding-left: 10px;
+                height: 60px;
+                width:65px;
+                margin-top: 15px;
+                margin-left: 10px;
+                font-size: 22px;
+                border-radius: 60px;
+                text-align: center;
+                background-color: rgb(75, 74, 74);
+                color: white;
+                border: none;
+              
+                
+            }
+            /* button:hover{
+                background-color:red;
+            } */
+          .a{
+            background-color: rgb(255, 157, 0);
+          }
+       
+          
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <center>
+        <div class="outer">
+            <div id="display">
+                <div style="height: 35%;"></div>
+                <div id="text"></div>
+            </div>
+        
+            <button class="a" onclick="clea(event)">AC</button>
+            <button class="a" onclick="DEL()">DE</button>
+            <button class="a" onclick="cal(event)">.</button>
+            <button class="a" onclick="cal(event)">/</button>
+            <button class="b" onclick="cal(event)">9</button>
+            <button class="b" onclick="cal(event)">8</button>
+            <button class="b" onclick="cal(event)">7</button>
+            <button class="a" onclick="cal(event)">*</button>
+            <button class="b" onclick="cal(event)">6</button>
+            <button class="b" onclick="cal(event)">5</button>
+            <button class="b" onclick="cal(event)">4</button>
+            <button class="a" onclick="cal(event)">-</button>
+            <button class="b" onclick="cal(event)">1</button>
+            <button class="b" onclick="cal(event)">2</button>
+            <button class="b" onclick="cal(event)">3</button>
+            <button class="a" onclick="cal(event)">+</button>
+            <button class="a" onclick="res()">=</button>
+            <button class="b" onclick="cal(event)">0</button>
+            <button class="b" style="width: 151px;" onclick="cal(event)">00</button>
+           
+
+        </div>
+    </center>
+    <script>
+        var sum="";
+        function cal(e){
+           var dis= document.getElementById("text")
+           
+           dis.innerHTML+=e.target.innerHTML
+           console.dir(e.target)
+        }
+        function res(){
+            var dis= document.getElementById("text")
+            dis.innerHTML=eval(dis.innerHTML)
+         
+        }
+        function clea(e){
+            var dis= document.getElementById("text")
+             dis.innerHTML=""
+     
+        }
+        function DEL(){
+            var num=document.getElementById("text").innerHTML
+            var ar=[]
+            console.log(num.split(''))
+            ar=[...num.split('')]
+            ar.pop()
+            console.log(ar)
+            var br=ar.join("")
+            console.log(br)
+             document.getElementById("text").innerHTML=br
+            
+        }
+    </script>
+    </body>
+</html>

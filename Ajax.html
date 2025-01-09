@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api calls using Ajacs</title>
+</head>
+<body>
+    <div id="a1"></div>
+   <script>
+     var x =new XMLHttpRequest();
+     x.open("GET","https://fakestoreapi.com/products")
+     x.send();  
+     x.onloadend=function(){
+        var product = JSON.parse(x.response)
+        product.forEach((pr)=>{
+            var nli=document.createElement("li");
+            nli.innerHTML=pr.title;
+            document.getElementById("a1").appendChild(nli)
+        })
+     }                                         
+   </script>
+</body>
+</html>
