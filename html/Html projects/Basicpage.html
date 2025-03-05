@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Service Portfolio</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    }
+    header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    nav a:hover {
+        background: #575757;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    section {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .portfolio-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .portfolio-item {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    .portfolio-item:hover {
+        transform: scale(1.05);
+    }
+    .portfolio-item img {
+        width: 100%;
+        height: 100%;
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #333;
+        color: #fff;
+    }
+    @media (max-width: 768px) {
+        .portfolio-item {
+            flex: 1 1 calc(45% - 20px);
+        }
+    }
+    @media (max-width: 480px) {
+        .portfolio-item {
+            flex: 1 1 100%;
+        }
+    }
+</style>
+<body>
+    <header>
+        <h1>Welcome to My Bike Service at Hyderabad</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Our bike garage provides a comprehensive range of services to keep your bike in top condition. We specialize in repairs, from fixing flats and adjusting brakes to more complex issues like wheel truing and frame repairs. In addition to repairs, we offer routine maintenance, including tune-ups, chain cleaning, and brake or gear adjustments to ensure your bike runs smoothly. We also carry a selection of high-quality bike parts and accessories, such as tires, tubes, helmets, and locks. Whether you're looking to customize your bike with upgrades or need expert advice, our team is here to help. Visit us for personalized service and expert guidance to keep your bike performing at its best!</p>
+        <p>మన బైక్ గ్యారేజి మీ బైకును ఉత్తమ స్థితిలో ఉంచేందుకు విస్తృత సేవలను అందిస్తుంది. మేము ఫ్లాట్లు మరమ్మతు చేయడం, బ్రేకులను సర్దుబాటు చేయడం, వీల్ ట్రూఇంగ్ మరియు ఫ్రేమ్ మరమ్మతులు వంటి కష్టం పనుల నుండి ప్రారంభించి, మరమ్మతులను ప్రత్యేకంగా అందిస్తాము. మరమ్మతులకు అదనంగా, మేము రూటిన్ నిర్వహణ, ట్యూన్-అప్‌లు, చైన్ శుభ్రపరిచే మరియు బ్రేక్ లేదా గేర్ సర్దుబాట్లు అందించి మీ బైక్ సాఫీగా పనిచేసేలా చేస్తాము. అలాగే, మేము ఉన్నత నాణ్యత కలిగిన బైక్ భాగాలు మరియు యాక్ససరీలను స్టాక్ చేస్తాము, వీటిలో టైర్లు, ట్యూబ్స్, హెల్మెట్లు మరియు లాక్స్ ఉన్నాయి. మీ బైకును కస్టమైజ్ చేయాలని లేదా నిపుణుల సలహా కావాలని మీరు కోరుకుంటే, మా బృందం మీకు సహాయం చేయడానికి సిద్ధంగా ఉంది. మా వద్ద వ్యక్తిగత సేవ మరియు నిపుణుల మార్గదర్శకత్వం కోసం మమ్మల్ని సందర్శించండి, తద్వారా మీ బైక్ అత్యుత్తమంగా పనిచేయగలదు!</p>
+    </section>
+    <section id="services">
+        <h2>Services Offered</h2>
+        <ol>
+            <li><strong>Bike Repair</strong>
+                <ul>
+                    <li>Flat Tire Repair</li>
+                    <li>Brake Repairs & Adjustments</li>
+                    <li>Gear Adjustments</li>
+                    <li>Wheel Truing</li>
+                    <li>Frame Repairs</li>
+                </ul>
+            </li>
+            <li><strong>Maintenance Services</strong>
+                <ul>
+                    <li>Tune-ups</li>
+                    <li>Chain Cleaning & Lubrication</li>
+                    <li>Brake System Maintenance</li>
+                    <li>Gear System Cleaning & Lubrication</li>
+                </ul>
+            </li>
+            <li><strong>Custom Modifications</strong>
+                <ul>
+                    <li>Custom Bike Builds</li>
+                    <li>Upgrading Components</li>
+                    <li>Suspension Upgrades</li>
+                </ul>
+            </li>
+            <li><strong>Parts & Accessories</strong>
+                <ul>
+                    <li>Bike Parts (Tires, Tubes, Pedals, etc.)</li>
+                    <li>Accessories (Helmets, Lights, Locks, etc.)</li>
+                </ul>
+            </li>
+            <li><strong>Consultation & Advice</strong>
+                <ul>
+                    <li>Choosing the Right Bike</li>
+                    <li>Bike Care Tips</li>
+                    <li>Safety Advice</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="https://wallpaperaccess.com/full/484935.jpg" alt="Bike Service 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://wallpapercave.com/wp/wp9040665.jpg" alt="Bike Service 2">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://th.bing.com/th/id/R.0d4d85fd554c28dff9d3ab71411383d7?rik=L0lxHFKYqtu4Hg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-hd-bike-suzuki-hayabusa-sport-motorcycle-bike-png-image-1632.png&ehk=wfkppS%2f5FiuhqVdr9GNFwW7qg6eaMG6wL0OHZCRnDww%3d&risl=&pid=ImgRaw&r=0" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.ytimg.com/vi/8g59jYaP8Ts/maxresdefault.jpg" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.financialexpress.com/wp-content/uploads/2020/03/modified-royal-enfield-bikes.jpg" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://gaadiwaadi.com/wp-content/uploads/2022/12/modified-hunter-350-2.jpg" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.ytimg.com/vi/IvqoxAwgXdk/maxresdefault.jpg" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.financialexpress.com/wp-content/uploads/2021/10/modified-royal-enfield-classic-350-bobber-eimor-customs-main.jpg" alt="Bike Service 3">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.ytimg.com/vi/pgTFoUabDSg/maxresdefault.jpg" alt="Bike Service 3">
+                </div>
+                <!-- <div class="portfolio-item">
+                    <img src="" alt="Bike Service 3">
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Bike Service Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
