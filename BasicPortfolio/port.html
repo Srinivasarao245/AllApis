@@ -1,0 +1,158 @@
+Here's a simple portfolio website using HTML, CSS, and JavaScript:
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>  
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+    }
+
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul li {
+        margin-right: 20px;
+    }
+
+    header nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+    }
+
+    section {
+        background-color: #f7f7f7;
+        padding: 2em;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .project {
+        background-color: #fff;
+        padding: 1em;
+        border: 1px solid #ddd;
+    }
+
+    .project h2 {
+        margin-top: 0;
+    }
+
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact label {
+        margin-bottom: 10px;
+    }
+
+    #contact input, #contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+    #contact input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #contact input[type="submit"]:hover {
+        background-color: #444;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to my portfolio!</h1>
+            <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
+        </section>
+        <section id="about">
+            <h1>About me</h1>
+            <p>I'm a highly motivated and detail-oriented web developer with a strong passion for coding.</p>
+        </section>
+        <section id="projects">
+            <h1>My projects</h1>
+            <div class="project-grid">
+                <div class="project">
+                    <h2>Project 1</h2>
+                    <p>A brief description of project 1.</p>
+                </div>
+                <div class="project">
+                    <h2>Project 2</h2>
+                    <p>A brief description of project 2.</p>
+                </div>
+                <div class="project">
+                    <h2>Project 3</h2>
+                    <p>A brief description of project 3.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Get in touch</h1>
+            <p>If you'd like to discuss a project or just say hello, please feel free to contact me.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
