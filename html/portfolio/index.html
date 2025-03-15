@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <style>
+        body{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+        }
+        .todo{
+            display:flex;
+            flex-direction:column;
+            align-items:start;
+            margin-top:100px;
+        }
+        .name{
+            font-size:30px;
+            font-weight:600;
+            margin-bottom:15px;    
+        }
+        .taskInput{
+            width:200px;
+            height:25px;
+            padding:5px;
+            border-radius:3px;
+            border:1px solid #000000;
+        }
+        .addtsk{
+            padding:10px 25px;
+            border:none;
+            background-color:rgb(24, 24, 141);
+            color:#fff;
+            font-weight:600;
+            border-radius:3px;
+        }
+        .list li{
+            margin-left:0px;
+            padding:5px;
+            border-radius:2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <span class="name">Todo List</span>
+        <div class="task">
+            <input type="text" placeholder="Enter Your Task" class="taskInput"/>
+            <button class="addtsk" onclick="addTask()">AddTask</button>
+        </div>
+        <ol class="list"></ol>
+    </div>
+    <script>
+        function addTask(){
+            let taskInput = document.querySelector(".taskInput");
+            let taskValue = taskInput.value.trim();
+            if(taskValue === ""){
+                alert("Please Enter Task");
+                return;
+            }
+            let li=document.createElement("li");
+            li.textContent = taskValue;
+            document.querySelector(".list").appendChild(li);
+            taskInput.value = "";
+        }
+    </script>
+</body>
+</html>
